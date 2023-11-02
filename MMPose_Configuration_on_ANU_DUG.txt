@@ -1,0 +1,68 @@
+######################################################################################################
+0.Import proxy
+######################################################################################################
+export https_proxy=http://proxy.per.dug.com:3128
+module load anaconda3
+module load cuda/11.2
+
+######################################################################################################
+1.Create a virtual environment
+######################################################################################################
+conda create --name openmmlab python=3.8 -y
+
+
+######################################################################################################
+2.Before entering the virtual environment (which is not the same as the normal one), you need to run the following two lines of commands, which are mainly used to determine the location of anaconda
+######################################################################################################
+echo ". /d/sw/anaconda3/5.2/etc/profile.d/conda.sh" >> ~/.bashrc
+source ~/.bashrc
+
+
+######################################################################################################
+3.Activate the virtual environment
+######################################################################################################
+conda activate openmmlab
+
+######################################################################################################
+4.Install Pytorch with cuda 11.2
+######################################################################################################
+module load cuda/11.2
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=10.2 -c pytorch
+
+######################################################################################################
+5.Installation of MMEngine and MMCV
+######################################################################################################
+pip install -U openmim
+mim install mmengine
+mim install "mmcv>=2.0.1"
+mim install "mmdet>=3.1.0"
+
+######################################################################################################
+6.Installation from source
+######################################################################################################
+git clone https://github.com/open-mmlab/mmpose.git
+cd mmpose
+pip install -r requirements.txt
+pip install -v -e .
+
+######################################################################################################
+7.Exiting the virtual environment
+######################################################################################################
+source deactivate openmmlab
+
+######################################################################################################
+8.Go to the mmpose folder
+######################################################################################################
+cd mmpose
+
+######################################################################################################
+9.Verify that the installation was successful
+######################################################################################################
+python demo/topdown_demo_with_mmdet.py demo/mmdetection_cfg/faster_rcnn_r50_fpn_coco.py https://download.openmmlab.com/mmdetection/v2.0/faster_rcnn/faster_rcnn_r50_fpn_1x_coco/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth configs/animal_2d_keypoint/topdown_heatmap/animalpose/td-hm_hrnet-w32_8xb64-210e_animalpose-256x256.py https://download.openmmlab.com/mmpose/animal/hrnet/hrnet_w32_animalpose_256x256-1aa7f075_20210426.pth --input tests/data/animalpose/ca110.jpeg --show --draw-heatmap --det-cat-id=15
+
+# If the following error is reported:
+ImportError: numpy.core.multiarray failed to import mmpose
+# Fix it with the following code
+pip install -U numpy
+
+# If NO CUDA appears, the installation was successful.
