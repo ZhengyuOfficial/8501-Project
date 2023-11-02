@@ -12,7 +12,5 @@ At the same time, we also spent some initial time configuring and testing the mm
 
 In the early days of the project, we spent some money configuring and testing the mmpose environment on the ANU DUG. This was not a very easy task, so I think this can also be counted as one of the team's workload. At the same time, we provide a complete instruction manual for configuring MMPose on ANU DUG.
 
-Because starting the complete program also requires other py scripts in the mmpose library, due to limitations, only the core code we use is shown here. The code we mainly use includes three parts, the Backbone part, the Rleloss part and the NF part. The codes for these three parts are in corresponding folders. Among them, the backbone part includes the three backbones used in this article, namely alexnet, resnet and scnet. The Rleloss part includes RleHeadStructure and Rleloss used in this article. The NF part includes the NF model used in this article, RealNVP.
-
-
+The code we mainly use includes three parts, the Backbone part, the Rleloss part and the NF part. The codes for these three parts are in corresponding folders. Among them, the backbone part includes the three backbones used in this article, namely alexnet, resnet and scnet. The Rleloss part includes RleHeadStructure and Rleloss used in this article. The NF part includes the NF model used in this article, RealNVP.
 ## About this directory
