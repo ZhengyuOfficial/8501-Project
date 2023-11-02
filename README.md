@@ -15,6 +15,9 @@ In the early days of the project, we spent some money configuring and testing th
 The code we mainly use includes three parts, the Backbone part, the Rleloss part and the NF part. The codes for these three parts are in corresponding folders. Among them, the backbone part includes the three backbones used in this article, namely alexnet, resnet and scnet. The Rleloss part includes RleHeadStructure and Rleloss used in this article. The NF part includes the NF model used in this article, RealNVP.
 
 ## About our work
+In human pose estimation, heatmap-based methods have achieved superior performance but at the cost of higher computational demands, impeding real-time applications. Conversely, regression-based methods, exemplified by DeepPose, are more efficient but lag in accuracy. In this work, we propose SCNet-RLE, a novel framework that merges the Self-Calibrated Convolutions (SCC) from SCNet with the Residual Log-likelihood Estimation (RLE), aiming to enhance the accuracy of regression-based pose estimation while maintaining computational efficiency. The SCC module enriches the receptive field, capturing more contextual information without additional parameters, whereas RLE transitions the regression paradigm to a probabilistic domain, considering the residuals between predicted and true joint coordinates. We conducted extensive evaluations on the COCO dataset, where our SCNet-101 + RLE configuration achieved an AP of 0.701, significantly advancing over the conventional regression-based methods. Moreover, SCNet-RLE demonstrates competitive performance in comparison to heatmap-based methods while maintaining higher computational efficiency, enabling the possibility for real-time deployments. Our ablation studies further explore the effects of SCNet and RLE, aiming to find a balance between accuracy and efficiency in human pose estimation tasks. 
+
+The structure of our model:
 
 
 
