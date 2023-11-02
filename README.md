@@ -13,6 +13,11 @@ At the same time, we also spent some initial time configuring and testing the mm
 In the early days of the project, we spent some money configuring and testing the mmpose environment on the ANU DUG. This was not a very easy task, so I think this can also be counted as one of the team's workload. At the same time, we provide a complete instruction manual for configuring MMPose on ANU DUG.
 
 The code we mainly use includes three parts, the Backbone part, the Rleloss part and the NF part. The codes for these three parts are in corresponding folders. Among them, the backbone part includes the three backbones used in this article, namely alexnet, resnet and scnet. The Rleloss part includes RleHeadStructure and Rleloss used in this article. The NF part includes the NF model used in this article, RealNVP.
+
+## About our work
+
+
+
 ## About this directory
 - `8501-Project/mmpose/models/heads/regression_heads
 /rle_head.py`:Top-down regression head introduced in `RLE`_ by Li et al(2021). The head is composed of fully-connected layers to predict the coordinates and sigma(the variance of the coordinates) together.
@@ -29,3 +34,5 @@ The code we mainly use includes three parts, the Backbone part, the Rleloss part
 - - `configs/custom/*.py`:
 - `8501-Project/sh/.sh`: Scripts on ANU DUG to invoke mmdetection apis.
 - `8501-Project/ExperimentResults`: Stores the results of our experiments
+- `8501-Project/MMPose_Configuration_on_ANU_DUG`：Instructions for configuring MMPose on an ANU DUG
+- `8501-Project/figure/*`：Store the images used in this experiment
