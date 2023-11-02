@@ -25,3 +25,5 @@ The code we mainly use includes three parts, the Backbone part, the Rleloss part
 /resnet.py`: Code about ResNet backbon
 - `mmpose/mmpose/models/backbones
 /scnet.py`: Code about SCNet backbon
+- `configs/custom/*.py`: Config file customized based on different models and parameters
+- `sh/.sh`: Scripts on ANU DUG to invoke mmdetection apis.
