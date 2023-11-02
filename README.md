@@ -4,8 +4,7 @@
 
 Our work is centered around an existing tool, MMPose. MMPose is an open-source toolbox for pose estimation based on PyTorch. It is a part of the OpenMMLab project. 
 
-What I want to state here is that although we use the code in MMPose, we do not simply copy it. On the contrary, we fully understand the complete code running logic of each part of the code. Moreover, what we use are very mature codes that are already open source. Because these codes are already very mature, we think there is no need to rewrite them. On the contrary, we have fully commented the core code parts we use.
-
+What I want to state here is that although we use the code in MMPose, we do not simply copy it. On the contrary, we fully understand the complete code running logic of each part of the code. Moreover, what we use are very mature codes that are already open source. Because these codes are already very mature, we think there is no need to rewrite them.
 We just use MMPose as a tool to help us save time to quickly train the model and decide on subsequent adjustments based on the results. It is worth noting that the parameters of the model are still defined by ourselves, and we provide the Config script for each model we run as well as the task script submitted to ANU DUG.
 
 At the same time, we also spent some initial time configuring and testing the mmpose environment on the ANU DUG. This was not a simple thing, so I think this can also be counted as the workload of our team. We provide complete instructions for configuring MMPose on ANU DUG.
