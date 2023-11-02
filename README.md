@@ -14,17 +14,18 @@ In the early days of the project, we spent some money configuring and testing th
 
 The code we mainly use includes three parts, the Backbone part, the Rleloss part and the NF part. The codes for these three parts are in corresponding folders. Among them, the backbone part includes the three backbones used in this article, namely alexnet, resnet and scnet. The Rleloss part includes RleHeadStructure and Rleloss used in this article. The NF part includes the NF model used in this article, RealNVP.
 ## About this directory
-- `mmpose/mmpose/models/heads/regression_heads
+- `8501-Project/mmpose/models/heads/regression_heads
 /rle_head.py`:Top-down regression head introduced in `RLE`_ by Li et al(2021). The head is composed of fully-connected layers to predict the coordinates and sigma(the variance of the coordinates) together.
-- `mmpose/mmpose/models/losses
+- `8501-Project/mmpose/models/losses
 /regression_loss.py`: Code about Residual Log-Likelihood Estimation Loss and SmoothL1Loss
-- `mmpose/mmpose/models/utils
+- `8501-Project/mmpose/models/utils
 /realnvp.py`: Code about density estimation using Real NVP
-- `mmpose/models/backbones/alexnet.py`: Code about AlexNet.
-- `mmpose/mmpose/models/backbones
+- `8501-Project/models/backbones/alexnet.py`: Code about AlexNet.
+- `8501-Project/mmpose/models/backbones
 /resnet.py`: Code about ResNet backbon
-- `mmpose/mmpose/models/backbones
+- `8501-Project/mmpose/models/backbones
 /scnet.py`: Code about SCNet backbon
-- `configs/custom/*.py`: Config file customized based on different models and parameters
+- `8501-Project/configs/custom/*.py`: Config file customized based on different models and parameters
 - - `configs/custom/*.py`:
-- `sh/.sh`: Scripts on ANU DUG to invoke mmdetection apis.
+- `8501-Project/sh/.sh`: Scripts on ANU DUG to invoke mmdetection apis.
+- `8501-Project/ExperimentResults`: Stores the results of our experiments
