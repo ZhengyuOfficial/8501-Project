@@ -89,13 +89,19 @@ class RLEHead(BaseHead):
 
         if test_cfg.get('flip_test', False):
             # TTA: flip test -> feats = [orig, flipped]
+            # This is an assertion that checks if feats is a list with exactly two elements which is required for the flip test, where you need the original and flipped features.
             assert isinstance(feats, list) and len(feats) == 2
+            # Retrieves the flip_indices from the metadata of the first sample in batch_data_samples.
             flip_indices = batch_data_samples[0].metainfo['flip_indices']
+            # Retrieves the input_size from the metadata of the first sample in batch_data_samples.
             input_size = batch_data_samples[0].metainfo['input_size']
 
+            # Unpacks the feats tuple into two variables: _feats for the original features and _feats_flip for the flipped features.
             _feats, _feats_flip = feats
 
+            # Calls the forward method of the class with _feats to get the coordinates.
             _batch_coords = self.forward(_feats)
+            # Applies the sigmoid function to all elements in _batch_coords starting from the third dimension onwards. This is done to scale the output to a range between 0 and 1.
             _batch_coords[..., 2:] = _batch_coords[..., 2:].sigmoid()
 
             _batch_coords_flip = flip_coordinates(
