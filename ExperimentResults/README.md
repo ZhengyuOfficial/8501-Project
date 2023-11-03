@@ -1,5 +1,5 @@
 ## Results of our model
-Here is the result of our model.
+Here is the result of our model. 因为github有文件大小限制，剩余的pth文件存储在google drive,[Zhengyu's Google Drive](https://drive.google.com/drive/folders/1vb5a1zklKBmfYHJYYNQhOYPxCQjfzia0)
 
 ### AlexNet
 - `topd-Alexnet-20epochs.pth`
