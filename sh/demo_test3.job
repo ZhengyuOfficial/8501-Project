@@ -1,0 +1,39 @@
+#!/bin/bash
+
+###################################################################################
+#rj name=zzztest
+#rj nodes=1
+#rj queue=anu_8501
+#rj taskspernode=1
+#rj features=v100
+
+msg() { printf "$*\n" >&2; }
+die() { msg "!!! $*"; exit 1; }
+log() { msg "### $*"; }
+
+module purge
+module load openmpi/4.1.3-mlnx-gcc
+module unload cuda/11.3.1
+module load anaconda3
+module load cuda/11.2
+module load gcc/9.2.0
+module list
+
+cd "/data/anu_8501/anu_u7533680/"
+
+export HTTPS_PROXY=http://proxy.per.dug.com:3128
+export HTTP_PROXY=http://proxy.per.dug.com:3128
+export https_proxy=http://proxy.per.dug.com:3128
+export http_proxy=http://proxy.per.dug.com:3128
+
+echo ". /d/sw/anaconda3/5.2/etc/profile.d/conda.sh" >> ~/.bashrc
+source ~/.bashrc
+
+
+##################################################################################
+cd mmpose
+conda activate openmmlab
+echo "### Activated conda env"
+
+
+python tools/train.py 'td-hm_swin-t-p4-w7_8xb32-210e_coco-256x192.py'
