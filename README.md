@@ -19,6 +19,12 @@ In human pose estimation, heatmap-based methods have achieved superior performan
 The structure of our model:
 ![image](figure/RLE.png)
 
+## Quick Navigate
+Quick look: 
+Results (pth): [Results](https://github.com/ZhengyuOfficial/8501-Project/tree/main/ExperimentResults) & [Google Drive](https://drive.google.com/drive/folders/1vb5a1zklKBmfYHJYYNQhOYPxCQjfzia0)
+Configuration file: [Config](https://github.com/ZhengyuOfficial/8501-Project/tree/main/configs/custom)
+Visualization section: [Visualization](https://github.com/ZhengyuOfficial/8501-Project/tree/main/Visualization)
+
 
 ## About this directory
 - `8501-Project/mmpose/models/heads/regression_heads
