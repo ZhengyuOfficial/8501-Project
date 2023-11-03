@@ -1,6 +1,5 @@
 ## Results of our model
-Here is the result of our model. 因为github有文件大小限制，剩余的pth文件存储在google drive,[Zhengyu's Google Drive](https://drive.google.com/drive/folders/1vb5a1zklKBmfYHJYYNQhOYPxCQjfzia0)
-
+Here is the result of our model. Because github has a file size limit, the remaining pth files are stored on google drive, [Zhengyu's Google Drive](https://drive.google.com/drive/folders/ 1vb5a1zklKBmfYHJYYNQhOYPxCQjfzia0)
 ### AlexNet
 - `topd-Alexnet-20epochs.pth`
 - `topd-Alexnet-50epochs.pth`
