@@ -1,7 +1,7 @@
 ## Results of our model
 Here is the result of our model. Because github has a file size limit, the remaining pth files are stored on google drive
 
-[Our Google Drive] (https://drive.google.com/drive/folders/ 1vb5a1zklKBmfYHJYYNQhOYPxCQjfzia0)
+[Our Google Drive](https://drive.google.com/drive/folders/1vb5a1zklKBmfYHJYYNQhOYPxCQjfzia0)
 
 ### AlexNet
 - `topd-Alexnet-20epochs.pth`
