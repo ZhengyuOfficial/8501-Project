@@ -12,12 +12,13 @@ In this experiment, we tested the accuracy of different backbone with different 
 - `topd-Alexnet-RLELoss-50epochs.py`
   
 ### ResNet
-- `topd-Resnet50-20epochs.py`
-- `topd-Resnet101-20epochs.py`
-- `topd-Resnet101-RLELoss-20epochs.py`
-- `topd-Resnet101-RLELoss-50epochs.py`
-- `topd-Resnet101-RLELoss-100epochs.py`
-- `topd-Resnet152-20epochs.py`
+- `topd-Resnet50-20epochs.py` 
+- `topd-Resnet50-RLELoss-20epochs.py` 
+- `topd-Resnet50-RLELoss-100epochs.py`
+- `topd-Resnet101-20epochs.py` 
+- `topd-Resnet101-RLELoss-100epochs.py` 
+- `topd-Resnet152-20epochs.py` 
+-  `topd-Resnet152-RLELoss-20epochs.py` 
 
 ### SCNet
 - `topd-SCnet101-20epochs.py`
