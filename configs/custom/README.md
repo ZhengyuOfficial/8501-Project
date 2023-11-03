@@ -5,19 +5,25 @@ It starts with data loading and data processing, and then configures the backbon
 
 In this experiment, we tested the accuracy of different backbone with different loss functions at different epochs.
 
-- `topd-Resnet101-RLELoss-100epochs.py`
-- `topd-SCnet101-RLELoss-100epochs.py`
-
-- `topd-Alexnet-50epochs.py`
-- `topd-Alexnet-RLELoss-50epochs.py`
-- `topd-Resnet101-RLELoss-50epochs.py`
+- `topd-SCnet101-20epochs.py`
 - `topd-SCnet101-RLELoss-50epochs.py`
+- `topd-SCnet101-RLELoss-100epochs.py`
+- `topd-SCnet101-RLELoss-20epochs.py`
 
+  
 - `topd-Alexnet-20epochs.py`
+- `topd-Alexnet-50epochs.py`
+- `topd-Alexnet-RLELoss-20epochs.py`
+- `topd-Alexnet-RLELoss-50epochs.py`
+  
+
 - `topd-Resnet50-20epochs.py`
 - `topd-Resnet101-20epochs.py`
-- `topd-Resnet152-20epochs.py`
-- `topd-SCnet101-20epochs.py`
-- `topd-Alexnet-RLELoss-20epochs.py`
 - `topd-Resnet101-RLELoss-20epochs.py`
-- `topd-SCnet101-RLELoss-20epochs.py`
+- `topd-Resnet101-RLELoss-50epochs.py`
+- `topd-Resnet101-RLELoss-100epochs.py`
+- `topd-Resnet152-20epochs.py`
+
+
+
+
